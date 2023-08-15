@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="This is an awesome website" />
+    <title>Lost-Found</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      input[type="text"],
+      input[type="password"],
+      input[type="email"],
+      select,
+      textarea,
+      button {
+        width: 60%;
+        padding: 12px;
+        border: 1px solid green;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+      label {
+        color: green;
+        font-weight: 500;
+        font-size: 18px;
+      }
+      input[type="text"],
+      input[type="password"],
+      input[type="email"]:focus {
+        width: 60%;
+        padding: 12px;
+        border: 1px solid green;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      background: url('{% static '/css/images/Mubs.jpg'%}');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 600px;
+      opacity: 0.8;
+    "
+  >
+    {% block content %} {% endblock %}
+  </body>
+</html>

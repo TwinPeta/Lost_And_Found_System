@@ -1,0 +1,23 @@
+{% load static %}
+<!-- Add this line at the top of your template file -->
+
+{% include 'base.html' %} {% if messages %}
+<div class="message">
+  {% for message in messages %}
+  <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+  {% endfor %}
+</div>
+{% endif %}
+
+<div class="box">
+  <h1 id="logreg" style="color: green">Login to your Account</h1>
+  <div class="loginform">
+    <form method="POST">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit" class="log">Login</button>
+    </form>
+    <div id="login-or">
+      <!-- Other login form content -->
+    </div>
+  </div>
+</div>
